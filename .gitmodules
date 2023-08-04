@@ -1,0 +1,3 @@
+[submodule "app/src/blog"]
+	path = app/src/blog
+	url = https://github.com/timkicker/timkicker.github.io.git
