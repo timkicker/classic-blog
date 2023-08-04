@@ -34,6 +34,13 @@ class Post {
     $myfile = fopen($this->file_path, "r") or die("Unable to open file!");
     $markdown = fread($myfile,filesize($this->file_path));
     fclose($myfile);
+
+
+
+    // correct path
+    $this->file_name = str_replace(".md","",$this->file_name);
+    $markdown = str_replace($this->file_name."/","blog/source/_posts/".$this->file_name."/",$markdown);
+
     require_once "Parsedown.php";
     $Parsedown = new Parsedown();
     $my_html = $Parsedown->text($markdown);
@@ -41,9 +48,6 @@ class Post {
   }
 }
 
-function get_post($file){
-
-}
 
 function get_faq_html(){
   $file_path = './blog/source/faq/index.md';

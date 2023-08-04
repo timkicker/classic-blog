@@ -35,8 +35,12 @@
     catch (Exception $e){
     }
 
+
     if ($get_valid){
         $entry_post = new Post();
+
+
+        $entry_post->file_name = $file_name;
         $entry_post->file_path = './blog/source/_posts/' . $file_name;
 
         echo $entry_post->get_html();
