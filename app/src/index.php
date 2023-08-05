@@ -38,7 +38,7 @@
 
 				<p><?php echo $info->theme_info; ?></p>
 
-				<p><?php echo $info->theme_desc; ?> Also, this is the "minimal/retro/web1.0" version of my blog btw. But there should be no difference at all (except some minor quoting errors)</p>
+				<p><?php echo $info->theme_desc; ?> Also, this is my more personal "minimal/retro/web1.0" version of the blog. But there should be no difference at all (except some minor quoting errors)</p>
 
 				
 				<a href="https://tim.kicker.dev">Modern theme</a><br> <br>
@@ -68,7 +68,7 @@
 		
 		<?php
 			foreach ($posts as $post){
-				$post_line = '<li>' . $post->date . ': ' .' <a href="blog_post.php?entry='. $post->file_name . '">';
+				$post_line = '<li>' . $post->get_date() . ': ' .' <a href="blog_post.php?entry='. $post->file_name . '">';
 				$post_line = $post_line . $post->title;
 				$post_line = $post_line  . '</a>'. '</li>';
 				echo $post_line;

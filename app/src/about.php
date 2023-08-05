@@ -22,6 +22,7 @@
 		<a href="https://tim.kicker.dev">Modern blog</a> |
         <a href="https://tim.kicker.dev/rss" style="color: #ffb800">RSS</a>
 	</div>
+  <hr />
 <?php
     require('blogloader.php');
     require_once __DIR__.'/vendor/autoload.php';
